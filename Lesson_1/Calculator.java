@@ -15,7 +15,6 @@ public class Calculator {
         } else if (operation == '%') {
             System.out.println(num1 % num2);
         } else if (operation == '^') {
-            int count = 0;
             int result = 1;
             for(int i = 0; i < num2; i++) {
                 result *= num1;
