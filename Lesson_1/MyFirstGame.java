@@ -1,16 +1,17 @@
 public class MyFirstGame {
     public static void main(String[] args){
         int hiddenNumber = 10;
-        int playerNumber = 5;
-
-        do {
-            if(hiddenNumber > playerNumber) {
-                System.out.println("Заданное число болльше введенного");
-            } else if(hiddenNumber < playerNumber){
-                System.out.println("Заданное число меньше введенного");
+        int playerNumber = 12;
+        while (playerNumber != hiddenNumber) {
+            if (playerNumber < hiddenNumber) {
+                playerNumber++;
+                System.out.println("Число меньше заданного");
             }
-            playerNumber += 5;         
-        }while (playerNumber != hiddenNumber);
+            else if (playerNumber > hiddenNumber){
+                System.out.println("Число больше заданного");
+                playerNumber /= 2;
+            }
+       }
         System.out.println("Число угадано");
+        }
     }
-}
