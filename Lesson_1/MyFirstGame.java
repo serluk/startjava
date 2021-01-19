@@ -6,12 +6,11 @@ public class MyFirstGame {
             if (playerNumber < hiddenNumber) {
                 playerNumber++;
                 System.out.println("Число меньше заданного");
-            }
-            else if (playerNumber > hiddenNumber){
+            } else if (playerNumber > hiddenNumber) {
                 System.out.println("Число больше заданного");
                 playerNumber /= 2;
             }
-       }
+        }
         System.out.println("Число угадано");
         }
     }
