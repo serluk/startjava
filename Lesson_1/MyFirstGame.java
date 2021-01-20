@@ -1,5 +1,5 @@
 public class MyFirstGame {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         int hiddenNumber = 10;
         int playerNumber = 12;
         while (playerNumber != hiddenNumber) {
@@ -12,5 +12,5 @@ public class MyFirstGame {
             }
         }
         System.out.println("Число угадано");
-        }
     }
+}
