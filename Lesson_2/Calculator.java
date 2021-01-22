@@ -1,57 +1,39 @@
 public class Calculator {
     private int num1;
     private int num2;
-    private String op;
-
-    public int getNum1() {
-        return num1;
-    }
+    private String sign;
 
     public void setNum1(int num1) {
         this.num1 = num1;
-    }
-
-    public int getNum2() {
-        return num2;
     }
 
     public void setNum2(int num2) {
         this.num2 = num2;
     }
 
-    public String getOp() {
-        return op;
+    public void setOp(String sign) {
+        this.sign = sign;
     }
 
-    public void setOp(String op) {
-        this.op = op;
-    }
-
-    public double result(){
-        double result = 0;
-        switch (op) {
+    public double result() {
+        switch (sign) {
             case "+":
-                result = num1 + num2;
-                break;
+                return num1 + num2;
             case "-":
-                result = num1 - num2;
-                break;
+                return num1 - num2;
             case "*":
-                result = num1 * num2;
-                break;
+                return num1 * num2;
             case "/":
-                result = num1 / num2;
-                break;
+                return num1 / num2;
             case "%":
-                result = num1 % num2;
-                break;
+                return num1 % num2;
             case "^":
-                result = 1;
+               double result = 1;
                 for(int i = 0; i < num2; i++) {
                     result *= num1;
                 }
-                break;
+                return result;                
         }
-        return result;
+        return 0;        
       }
 }
