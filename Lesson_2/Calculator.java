@@ -27,8 +27,8 @@ public class Calculator {
         this.op = op;
     }
 
-    public int result(){
-        int result = 0;
+    public double result(){
+        double result = 0;
         switch (op) {
             case "+":
                 result = num1 + num2;
