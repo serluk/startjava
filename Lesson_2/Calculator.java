@@ -11,7 +11,7 @@ public class Calculator {
         this.num2 = num2;
     }
 
-    public void setOp(String sign) {
+    public void setSign(String sign) {
         this.sign = sign;
     }
 

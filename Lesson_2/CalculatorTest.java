@@ -8,9 +8,9 @@ public class CalculatorTest {
             int num1 = scan.nextInt();
             System.out.println("Введите первое число: " + num1);
             calculator.setNum1(num1);
-            String op = scan.next();
-            System.out.println("Введите знак математической операции: " + op);
-            calculator.setOp(op);
+            String sign = scan.next();
+            System.out.println("Введите знак математической операции: " + sign);
+            calculator.setSign(sign);
             int num2 = scan.nextInt();
             System.out.println("Введите первое число: " + num2);
             calculator.setNum2(num2);
