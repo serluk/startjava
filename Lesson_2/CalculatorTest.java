@@ -16,6 +16,6 @@ public class CalculatorTest {
             calculator.setNum2(num2);
             System.out.println(calculator.result());
             System.out.println("Хотите продолжить вычисления? [да/нет]:");
-        } while (scan.next() != "нет");
+        } while (!scan.next().equals("нет"));
     }
 }

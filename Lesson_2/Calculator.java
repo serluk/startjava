@@ -28,12 +28,12 @@ public class Calculator {
             case "%":
                 return num1 % num2;
             case "^":
-                double result = 1;
+                double calculate = 1;
                 for(int i = 0; i < num2; i++) {
-                    result *= num1;
+                    calculate *= num1;
                 }
-                return result;                
+                return calculate;                
         }
         return 0;        
-      }
+     }
 }
