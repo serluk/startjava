@@ -1,12 +1,12 @@
 public class Jaeger {
-   private String modelName;
-   private String mark;
-   private String origin;
-   private float height;
-   private float weight;
-   private int speed;
-   private int strength;
-   private int armor;
+    private String modelName;
+    private String mark;
+    private String origin;
+    private float height;
+    private float weight;
+    private int speed;
+    private int strength;
+    private int armor;
 
     public String getModelName() {
         return modelName;
@@ -72,12 +72,12 @@ public class Jaeger {
         this.armor = armor;
     }
 
-    boolean drift(){
+    boolean drift() {
         System.out.println("Вы вошли в дрифт");
         return true;
     }
 
-    void move(){
+    void move() {
         System.out.println("Вы прошли 5 шагов");
     }
 }
