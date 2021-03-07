@@ -1,4 +1,4 @@
-package player.guessnumber;
+import java.util.Random;
 import java.util.Scanner;
 
 public class GuessNumber {
@@ -13,32 +13,36 @@ public class GuessNumber {
     public GuessNumber() {
     }
 
-    public void start(GuessNumber players, int number){
-        Scanner scan = new Scanner(System.in);
-        int playerNumber1 = players.player1.getNumber();
-        int playerNumber2 = players.player2.getNumber();
-        System.out.println("Игрок 1 ввел число: " + playerNumber1);
-        System.out.println("Игрок 2 ввел число: " + playerNumber2);
-        while (true) {
-            if (playerNumber1 < number) {
-                playerNumber1++;
-                System.out.println("Число игрока 1 меньше заданного");
-            } else if (playerNumber1 > number) {
-                System.out.println("Число игрока 1 больше заданного");
-                playerNumber1 /= 2;
-            } else if (playerNumber1 == number) {
-                System.out.println("Игрок 1 угадал число");
-                break;
-            }  else if (playerNumber2 < number) {
-                playerNumber1++;
-                System.out.println("Число игрока 2 меньше заданного");
-            } else if (playerNumber2 > number) {
-                System.out.println("Число игрока 2 больше заданного");
-                playerNumber1 /= 2;
-            } else if (playerNumber2 == number) {
-                System.out.println("Игрок 2 угадал число");
-                break;
-            }
-        }
+    public int numberRandom(){
+        Random random = new Random();
+        int rand = random.nextInt(100);
+        return rand;
+    }
+
+    public void start(){
+      int rand = numberRandom();
+      Scanner scan = new Scanner(System.in);
+      while (true){
+          System.out.print("Число игрока " + player1.getName() + ": ");
+          player1.setNumber(scan.nextInt());
+          if (player1.getNumber() == rand) {
+              System.out.println(player1.getName() + " win");
+              break;
+          } else if(player1.getNumber() < rand){
+              System.out.println("Число " + player1.getName() + " меньше заданного");
+          } else {
+              System.out.println("Число " + player1.getName() + " больше заданного");
+          }
+          System.out.print("Число игрока " + player2.getName() + ": ");
+          player2.setNumber(scan.nextInt());
+          if (player2.getNumber() == rand) {
+              System.out.println(player2.getName() + " win");
+              break;
+          } else if(player2.getNumber() < rand){
+              System.out.println("Число " + player2.getName() + " меньше заданного");
+          } else {
+              System.out.println("Число " + player2.getName() + " больше заданного");
+          }
+      }
     }
 }
