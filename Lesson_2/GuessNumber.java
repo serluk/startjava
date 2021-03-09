@@ -10,37 +10,36 @@ public class GuessNumber {
         this.player2 = player2;
     }
 
-    public int generateRandom(){
-        Random random = new Random();
-        int rand = random.nextInt(100);
-        return rand;
-    }
-
     public void start(){
-        int rand = generateRandom();
+        int randomNumber = generateRandom();
         Scanner scan = new Scanner(System.in);
         while (true){
             System.out.print("Число игрока " + player1.getName() + ": ");
             player1.setNumber(scan.nextInt());
-            if (player1.getNumber() == rand) {
+            if (player1.getNumber() == randomNumber) {
                 System.out.println(player1.getName() + " win");
                 break;
-             } else if(player1.getNumber() < rand) {
+             } else if(player1.getNumber() < randomNumber) {
                 System.out.println("Число " + player1.getName() + " меньше заданного");
              } else {
                 System.out.println("Число " + player1.getName() + " больше заданного");
              }
-              System.out.println("");
-              System.out.print("Число игрока " + player2.getName() + ": ");
-              player2.setNumber(scan.nextInt());
-              if (player2.getNumber() == rand) {
-                  System.out.println(player2.getName() + " win");
-                  break;
-              } else if(player2.getNumber() < rand) {
-                  System.out.println("Число " + player2.getName() + " меньше заданного");
-              } else {
-                  System.out.println("Число " + player2.getName() + " больше заданного");
+
+             System.out.print("Число игрока " + player2.getName() + ": ");
+             player2.setNumber(scan.nextInt());
+             if (player2.getNumber() == randomNumber) {
+                 System.out.println(player2.getName() + " win");
+                 break;
+             } else if(player2.getNumber() < randomNumber) {
+                 System.out.println("Число " + player2.getName() + " меньше заданного");
+             } else {
+                 System.out.println("Число " + player2.getName() + " больше заданного");
           }
       }
+    }
+    private int generateRandom() {
+        Random random = new Random();
+        int rand = random.nextInt(100);
+        return rand;
     }
 }
