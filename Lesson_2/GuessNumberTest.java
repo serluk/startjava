@@ -10,7 +10,6 @@ public class GuessNumberTest {
         Player player1 = new Player(name1);
         Player player2 = new Player(name2);
         GuessNumber game = new GuessNumber(player1, player2);
-        game.start();
         String answer = "";
         do {
             System.out.println("Хотите продолжить игру? [yes/no]:");

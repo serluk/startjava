@@ -10,10 +10,10 @@ public class GuessNumber {
         this.player2 = player2;
     }
 
-    public void start(){
+    public void start() {
         int randomNumber = generateRandom();
         Scanner scan = new Scanner(System.in);
-        while (true){
+        while (true) {
             System.out.print("Число игрока " + player1.getName() + ": ");
             player1.setNumber(scan.nextInt());
             if (player1.getNumber() == randomNumber) {
@@ -38,8 +38,6 @@ public class GuessNumber {
       }
     }
     private int generateRandom() {
-        Random random = new Random();
-        int rand = random.nextInt(100);
-        return rand;
+        return random.nextInt(100);
     }
 }
