@@ -37,6 +37,7 @@ public class GuessNumber {
           }
       }
     }
+    
     private int generateRandom() {
         return random.nextInt(100);
     }
