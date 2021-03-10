@@ -35,9 +35,9 @@ public class GuessNumber {
                  System.out.println("Число " + player2.getName() + " меньше заданного");
              } else {
                  System.out.println("Число " + player2.getName() + " больше заданного");
-          }
-      }
+        }
     }
+}
 
     private int generateRandom() {
         Random random = new Random();
