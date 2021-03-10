@@ -12,6 +12,7 @@ public class GuessNumber {
 
     public void start() {
         int randomNumber = generateRandom();
+        System.out.println(randomNumber);
         Scanner scan = new Scanner(System.in);
         while (true) {
             System.out.print("Число игрока " + player1.getName() + ": ");
@@ -37,8 +38,9 @@ public class GuessNumber {
           }
       }
     }
-    
+
     private int generateRandom() {
-        return random.nextInt(100);
+        Random random = new Random();
+        return random.nextInt(101);
     }
 }
