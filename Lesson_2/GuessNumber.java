@@ -20,20 +20,20 @@ public class GuessNumber {
             if (player1.getNumber() == randomNumber) {
                 System.out.println(player1.getName() + " win");
                 break;
-             } else if(player1.getNumber() < randomNumber) {
-                System.out.println("Число " + player1.getName() + " меньше заданного");
-             } else {
-                System.out.println("Число " + player1.getName() + " больше заданного");
-             }
+            } else if(player1.getNumber() < randomNumber) {
+               System.out.println("Число " + player1.getName() + " меньше заданного");
+            } else {
+               System.out.println("Число " + player1.getName() + " больше заданного");
+            }
 
-             System.out.print("Число игрока " + player2.getName() + ": ");
-             player2.setNumber(scan.nextInt());
-             if (player2.getNumber() == randomNumber) {
-                 System.out.println(player2.getName() + " win");
-                 break;
-             } else if(player2.getNumber() < randomNumber) {
-                 System.out.println("Число " + player2.getName() + " меньше заданного");
-             } else {
+            System.out.print("Число игрока " + player2.getName() + ": ");
+            player2.setNumber(scan.nextInt());
+            if (player2.getNumber() == randomNumber) {
+                System.out.println(player2.getName() + " win");
+                break;
+            } else if(player2.getNumber() < randomNumber) {
+                System.out.println("Число " + player2.getName() + " меньше заданного");
+            } else {
                  System.out.println("Число " + player2.getName() + " больше заданного");
         }
     }
